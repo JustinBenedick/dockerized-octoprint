@@ -1,0 +1,17 @@
+version: '2.2'
+
+
+services:
+  octoprint_wdi3:
+    restart: unless-stopped
+    image: octoprint/octoprint
+    ports:
+      - 80:80
+    devices:
+      - /dev/ttyUSB0:/dev/ttyACM0
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+    volumes:
+     - /octoprint:/octoprint
+    environment:
+      - ENABLE_MJPG_STREAMER=true
