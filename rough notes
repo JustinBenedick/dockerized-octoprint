@@ -1,0 +1,7 @@
+What is on here : docker docker-octoprint cockpit
+
+Need wpa-supplicant.conf  on /boot/
+Need static ip address
+
+
+Go back and forth betwen docker setup and cockpit setup
