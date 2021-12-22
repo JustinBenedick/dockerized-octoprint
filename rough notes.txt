@@ -29,9 +29,10 @@ Cockpit is included in Debian since version 10 (Buster).
 When updating Cockpit-related packages and any dependencies, make sure to use -t ...-backports as above, so backports are included.
 
 
+Only use this when transfering a bunch of files
+
 sudo chown -R pi octoprint/
-sudo chmod -R 777 octoprint/
-sudo chgrp -R pi octoprint/
+
 
 
 add user to group

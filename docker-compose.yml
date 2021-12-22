@@ -1,5 +1,7 @@
 version: '2.2'
 
+# For the varibles below: HOSTSIDE:CONTAINER SIDE
+
 services:
   octoprint_wdi3:
     restart: unless-stopped
