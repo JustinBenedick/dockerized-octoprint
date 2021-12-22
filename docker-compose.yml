@@ -4,6 +4,7 @@ version: '2.2'
 services:
   octoprint_wdi3:
     restart: unless-stopped
+    container_name: octoprint-docked
     image: octoprint/octoprint
     ports:
       - 80:80
@@ -12,6 +13,6 @@ services:
       - /dev/video0:/dev/video0
       - /dev/video1:/dev/video1
     volumes:
-     - /octoprint:/octoprint
+     - /home/pi/OCTOPRINT:/octoprint
     environment:
       - ENABLE_MJPG_STREAMER=true
