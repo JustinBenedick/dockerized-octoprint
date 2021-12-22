@@ -9,8 +9,6 @@ Go back and forth betwen docker setup and cockpit setup
 
 DO NOT JUST USE sudo apt install cockpit   it fucks with wifi
 
-
-
 Debian
 
 These commands require a POSIX compatible shell like bash. For other shells like fish, temporarily run bash -i.
@@ -29,3 +27,9 @@ Cockpit is included in Debian since version 10 (Buster).
     apt install -t ${VERSION_CODENAME}-backports cockpit
 
 When updating Cockpit-related packages and any dependencies, make sure to use -t ...-backports as above, so backports are included.
+
+
+sudo chown -R pi octoprint/
+sudo chmod -R 777 octoprint/
+sudo chgrp -R pi octoprint/
+
