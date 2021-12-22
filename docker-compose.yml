@@ -1,6 +1,5 @@
 version: '2.2'
 
-
 services:
   octoprint_wdi3:
     restart: unless-stopped
@@ -14,5 +13,7 @@ services:
       - /dev/video1:/dev/video1
     volumes:
      - /home/pi/OCTOPRINT:/octoprint
+     - "/etc/localtime:/etc/localtime:ro"
     environment:
       - ENABLE_MJPG_STREAMER=true
+      - TZ=America/Chicago

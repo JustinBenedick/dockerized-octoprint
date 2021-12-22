@@ -33,3 +33,7 @@ sudo chown -R pi octoprint/
 sudo chmod -R 777 octoprint/
 sudo chgrp -R pi octoprint/
 
+
+add user to group
+usermod -a -G docker pi
+
