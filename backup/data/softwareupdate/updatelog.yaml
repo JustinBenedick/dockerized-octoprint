@@ -1,0 +1,48 @@
+- current_version: 1.7.0
+  datetime: '2021-11-02 21:59:54'
+  display_name: OctoPrint
+  release_notes: https://github.com/OctoPrint/OctoPrint/releases/tag/1.7.2
+  success: true
+  target: octoprint
+  target_version: 1.7.2
+  text: Update successful
+- current_version: 2021.8.2
+  datetime: '2021-11-02 21:59:58'
+  display_name: Pi Support Plugin
+  release_notes: https://github.com/OctoPrint/OctoPrint-PiSupport/releases/tag/2021.10.28
+  success: true
+  target: pi_support
+  target_version: 2021.10.28
+  text: Update successful
+- current_version: 1.18.3
+  datetime: '2021-11-04 22:47:33'
+  display_name: Dashboard Plugin
+  release_notes: https://github.com/j7126/OctoPrint-Dashboard/releases/tag/1.19.0
+  success: true
+  target: dashboard
+  target_version: 1.19.0
+  text: Update successful
+- current_version: 1.19.0
+  datetime: '2021-11-10 20:53:32'
+  display_name: Dashboard Plugin
+  release_notes: https://github.com/j7126/OctoPrint-Dashboard/releases/tag/1.19.3
+  success: true
+  target: dashboard
+  target_version: 1.19.3
+  text: Update successful
+- current_version: 1.19.3
+  datetime: '2021-11-14 21:54:16'
+  display_name: Dashboard Plugin
+  release_notes: https://github.com/j7126/OctoPrint-Dashboard/releases/tag/1.19.5
+  success: true
+  target: dashboard
+  target_version: 1.19.5
+  text: Update successful
+- current_version: 1.27.1
+  datetime: '2021-12-03 14:11:59'
+  display_name: DisplayLayerProgress Plugin
+  release_notes: https://github.com/OllisGit/OctoPrint-DisplayLayerProgress/releases/tag/1.27.2
+  success: true
+  target: DisplayLayerProgress
+  target_version: 1.27.2
+  text: Update successful

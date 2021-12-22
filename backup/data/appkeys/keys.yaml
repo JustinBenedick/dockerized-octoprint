@@ -1,0 +1,9 @@
+bean:
+- api_key: F82FB340CF8A44A798AA03E06095DFD0
+  app_id: SLICER
+- api_key: 8CE2785677B1424B97A18BE78EF7C7B0
+  app_id: phone
+- api_key: 815C69FF11C04E6AB5C70E4C3ABFA2B8
+  app_id: Cura
+- api_key: DC5DA6A39EEE496F9E54D3338D576476
+  app_id: slicer laptop
