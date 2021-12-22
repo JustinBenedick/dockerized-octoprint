@@ -1,0 +1,98 @@
+﻿https://www.youtube.com/watch?v=LcA9o6OGfEg
+
+--- Update Your Device
+apt-get update
+apt-get upgrade
+
+
+-- Install Prerequisits
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 net-tools software-properties-common -y
+
+
+-- Reboot your device
+reboot
+
+
+-- Run Docker Install Script
+curl -sSL https://get.docker.com | sh
+
+-- sudo premission fix
+sudo usermod -aG docker $(whoami)
+
+
+-- Check to see if Docker is up and running
+sudo docker ps
+
+
+-- Install Docker-Compose
+sudo apt-get install docker-compose
+
+-- Identify your printer
+ls /dev/ttyU*
+ls /dev/ttyA*
+
+-- Identify your webcam
+ls /dev/video*
+
+-- create directory for octoprint
+
+
+sudo mkdir octoprint
+
+--- grant full permissions to printer directory
+sudo chown pi octoprint
+chmod -R 777 octoprint
+
+
+-- create a directory for your printer
+cd octoprint
+mkdir reprap
+cd reprap
+
+
+-- get current working directory, record for later
+pwd
+-- return to octoprint directory
+cd ..
+
+COPY docker-compose.yml to system
+
+
+-- edit the docker-compose configuration file
+nano docker-compose.yml
+
+
+
+
+--- use docker-compose to start your instance
+
+
+docker-compose up -d
+
+
+--- get container id and then check logs to failures
+docker ps
+docker logs <containerid>
+
+
+--- grant full permissions to printer directory
+chmod -R 777 reprap
+
+
+-- restart your docker container
+docker restart <containerid>
+
+
+-- access your instance of octoprint by opening your browser and going to <deviceip>:<port>
+
+
+Make sure you use the following internal configuration (Settings » Webcam & Timelapse):
+
+    Stream URL: /webcam/?action=stream
+    Snapshot URL: http://localhost:8080/?action=snapshot
+    Path to FFMPEG: /usr/bin/ffmpeg
+
+URLs for reaching the camera from outside the container are:
+
+    Stream: http://dockerIP:dockerport/webcam/?action=stream
+    Snapshot: http://dockerport:dockerport/webcam/?action=snapshot
