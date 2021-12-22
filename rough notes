@@ -5,3 +5,27 @@ Need static ip address
 
 
 Go back and forth betwen docker setup and cockpit setup
+
+
+DO NOT JUST USE sudo apt install cockpit   it fucks with wifi
+
+
+
+Debian
+
+These commands require a POSIX compatible shell like bash. For other shells like fish, temporarily run bash -i.
+
+Cockpit is included in Debian since version 10 (Buster).
+
+    To get the latest version, we recommend to enable the backports repository (as root):
+
+    . /etc/os-release
+    echo "deb http://deb.debian.org/debian ${VERSION_CODENAME}-backports main" > \
+        /etc/apt/sources.list.d/backports.list
+    apt update
+
+    Install or update the package:
+
+    apt install -t ${VERSION_CODENAME}-backports cockpit
+
+When updating Cockpit-related packages and any dependencies, make sure to use -t ...-backports as above, so backports are included.
