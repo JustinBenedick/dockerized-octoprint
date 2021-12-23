@@ -10,7 +10,9 @@ services:
     ports:
       - 80:80
     devices:
+    #Printer usb device
       - /dev/ttyUSB0:/dev/ttyACM0
+    # Camera usb device, No idea why but camera shows up as 2 devices under /dev/
       - /dev/video0:/dev/video0
       - /dev/video1:/dev/video1
     volumes:
@@ -18,4 +20,5 @@ services:
      - "/etc/localtime:/etc/localtime:ro"
     environment:
       - ENABLE_MJPG_STREAMER=true
+## https://en.wikipedia.org/wiki/List_of_tz_database_time_zones  Use "TZ Database neme" column
       - TZ=America/Chicago
