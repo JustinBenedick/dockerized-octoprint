@@ -1,10 +1,9 @@
 What is on here : docker docker-octoprint cockpit
 
-Need wpa-supplicant.conf  on /boot/
-Need static ip address
 
+Need static ip address and wifi info setup
 
-Go back and forth betwen docker setup and cockpit setup
+Install docker and octoprint container
 
 
 DO NOT JUST USE sudo apt install cockpit   it fucks with wifi

@@ -1,5 +1,7 @@
 ﻿https://www.youtube.com/watch?v=LcA9o6OGfEg
 
+This file is a modification of what is used on that video.
+
 --- Update Your Device
 apt-get update
 apt-get upgrade
@@ -16,7 +18,7 @@ reboot
 -- Run Docker Install Script
 curl -sSL https://get.docker.com | sh
 
--- sudo premission fix
+-- docker sudo premission fix
 sudo usermod -aG docker $(whoami)
 
 
@@ -34,13 +36,14 @@ ls /dev/ttyA*
 -- Identify your webcam
 ls /dev/video*
 
--- create directory for octoprint
+Copy and  Modify yaml
 
+-- create directory for octoprint
 
 sudo mkdir octoprint
 
 --- grant full permissions to printer directory
-sudo chown pi octoprint
+sudo chown -R pi octoprint
 chmod -R 777 octoprint
 
 
@@ -48,20 +51,6 @@ chmod -R 777 octoprint
 cd octoprint
 mkdir reprap
 cd reprap
-
-
--- get current working directory, record for later
-pwd
--- return to octoprint directory
-cd ..
-
-COPY docker-compose.yml to system
-
-
--- edit the docker-compose configuration file
-nano docker-compose.yml
-
-
 
 
 --- use docker-compose to start your instance
@@ -93,6 +82,8 @@ Make sure you use the following internal configuration (Settings » Webcam & Tim
     Path to FFMPEG: /usr/bin/ffmpeg
 
 URLs for reaching the camera from outside the container are:
+
+Dockerport is needed you changed the port from 80 
 
     Stream: http://dockerIP:dockerport/webcam/?action=stream
     Snapshot: http://dockerport:dockerport/webcam/?action=snapshot
