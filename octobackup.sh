@@ -19,6 +19,7 @@ echo *************GCODE BACKUP*************
 echo *******NEW FILES****************
 find /home/pi/OCTOPRINT/octoprint/uploads -name "*.*" -type f -mtime +14
 #copying gcode files to nas without overwrite 
+echo *******COPYING****************
 cp -nruv /home/pi/OCTOPRINT/octoprint/uploads/   /home/pi/nasmount/dockmount/octoprint/
 echo *************DONE*************
 date
