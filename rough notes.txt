@@ -8,6 +8,9 @@ Install docker and octoprint container
 
 DO NOT JUST USE sudo apt install cockpit   it fucks with wifi
 
+sudo apt install cockpit-ws cockpit-system cockpit-packagekit cockpit-storaged cockpit-pcp
+
+  
 Debian
 
 These commands require a POSIX compatible shell like bash. For other shells like fish, temporarily run bash -i.
